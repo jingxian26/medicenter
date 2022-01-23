@@ -8,9 +8,9 @@
                 <head>
                     <tr>
                         <td>ID</td>
+                        <td>Doctor Image</td>
                         <td>Doctor Name</td>
                         <td>Doctor Description</td>
-                        <td>Doctor Image</td>
                     </tr>
                 <head>
                 <body>
