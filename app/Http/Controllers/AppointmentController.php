@@ -28,7 +28,7 @@ class AppointmentController extends Controller
             'code'=>$r->patientCode,
         ]);
         Session::flash('success',"Successfully reserved");
-        Return redirect()->route('showPatient');
+        Return redirect()->route('appointmentForm');
     }
 
     public function view(){
@@ -50,7 +50,9 @@ class AppointmentController extends Controller
     public function edit($id){
 
         $patients=Appointment::all()->where('id',$id);
+        
         Return view('editPatients')->with('patients',$patients);
+        Session::flash('success',"Edit Successfully");
     }
 
     public function update(){
@@ -68,6 +70,7 @@ class AppointmentController extends Controller
         $patients->code=$r->patientCode;
         $patients->save();
 
+        Session::flash('success',"Edit Successfully");
         Return redirect()->route('showPatient');
             
     }
